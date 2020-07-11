@@ -10,6 +10,8 @@ const Navbar = () => {
   const [home, setHome] = useState('nav-item active')
   const [meuCurso, setMeuCurso] = useState('nav-item active')
   const [logged] = useState(JSON.parse(localStorage.getItem('logged')))
+  const [cursos, setCursos] = useState('nav-item active')
+  const [usuarios, setUsuarios] = useState('nav-item active')
 
   useEffect(() => {
     handleActive()
@@ -25,13 +27,23 @@ const Navbar = () => {
   const handleActive = () => {
     setHome('nav-item')
     setMeuCurso('nav-item')
+    setCursos('nav-item')
+    setUsuarios('nav-item')
    
     let pathname = window.location.pathname
-    //console.log(pathname)
+    // console.log(pathname)
     if(pathname === '/home' || pathname === '/')
       return setHome('nav-item active')
     if(pathname === '/meucurso')
       return setMeuCurso('nav-item active')
+    
+    if(pathname === '/cursos')
+      return setCursos('nav-item active')
+
+    if(pathname === '/usuarios')
+      return setUsuarios('nav-item active')
+
+    
    
   }
   return (
@@ -49,7 +61,12 @@ const Navbar = () => {
             <li className={meuCurso}>
               <Link className="nav-link" to="/meucurso">Meu Curso</Link>
             </li>
-
+            <li className={cursos}>
+              <Link className="nav-link" to="/cursos">Cursos</Link>
+            </li>
+            <li className={usuarios}>
+              <Link className="nav-link" to="/usuarios">Usuários</Link>
+            </li>
             <li className="nav-item dropdown">
               <div className="nav-link dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style={{cursor:'pointer'}}  >{logged.name}</div>

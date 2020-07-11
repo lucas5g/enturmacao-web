@@ -14,7 +14,7 @@ import CourseForm from './components/CourseForm';
 
 import MyCourse from './components/MyCourse'
 
-import User from './components/User'
+import User from './pages/User'
 import UserForm from './components/UserForm'
 
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { DragDropContext } from 'react-beautiful-dnd'
 import styled from 'styled-components'
 import api from '../service/api'
-import Loading from './Loading'
+//import Loading from './Loading'
 
 import Column from './MyCourseClassColumn'
 
