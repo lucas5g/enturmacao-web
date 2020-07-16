@@ -30,9 +30,6 @@ const User = () => {
     return <p>Carregando...</p>
   }
 
-
-
-
   async function handleSearch(event: ChangeEvent<HTMLInputElement>) {
     const { value } = event.target
     setSearch(value)

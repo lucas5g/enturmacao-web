@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { FaEdit, FaPlus } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import api from '../service/api'
 
 function Course() {
 
-  const [courses] = useState(JSON.parse(localStorage.getItem('courses')))
+  // const [courses] = useState(JSON.parse(localStorage.getItem('courses')))
+
+  const [courses, setCourses] = useState([])
 
   useEffect(() => {
     document.title = 'Cursos'
 
-  })
+    api.get('/courses')
+      .then(response => {
+        const { data } = response
+        setCourses(data)
+        console.log(data)
+      })
+
+
+  }, [])
 
   return (
     <div className="container mt-4">

@@ -6,7 +6,7 @@ import Loading from './Loading'
 import { Link, useHistory } from 'react-router-dom'
 import AlertModal from './AlertModal'
 import { FaTrash } from 'react-icons/fa'
-import {loadUsers} from '../utils/load'
+// import {loadUsers} from '../utils/load'
 
 function User(props) {
 
@@ -80,7 +80,7 @@ function User(props) {
         setBtn({label:'Salvar', disabled: false})
         return;
       }
-      loadUsers()
+      // loadUsers()
       setAlert({message:'Cadastrado com Sucesso', color: 'success'})
       setModalShow(true)
       setBtn({label:'Salvar', disabled:false})

@@ -73,6 +73,7 @@ function Login() {
               <form className="text-center" onSubmit={handleSubmit}>
 
                 <div className="md-form">
+                  {/* {console.log(loggin.email)} */}
                   <input type="text" name="email" id="email" className="form-control" 
                     placeholder='E-mail'
                     value={loggin.email} onChange={updateField} autoFocus required />
