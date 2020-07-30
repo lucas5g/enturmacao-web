@@ -6,7 +6,7 @@ const hostname = () => {
   if(app === 'enturmacao.netlify.app')
     return 'https://enturmacao.herokuapp.com'
   
-  return 'http://192.168.0.28:8000'
+  return 'http://localhost:8000/api'
 }
 
 const api = axios.create({

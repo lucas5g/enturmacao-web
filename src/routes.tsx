@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 import Home from './components/Home'
-import Login from './components/Login'
+import Login from './pages/Login'
 
 import Course from './components/Course'
 import CourseForm from './components/CourseForm';
@@ -18,6 +18,8 @@ const Routes = () => {
 
   const token = localStorage.getItem('token')
 
+  // console.log(token)
+
   if(!token){
     return(
       <BrowserRouter>
@@ -30,7 +32,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <Route exact={true} path='/' component={Home} />
+      {/* <Route exact={true} path='/' component={Home} />
       <Route path='/home' component={Home} />
 
       <Route path='/meucurso' component={MyCourse} />
@@ -41,7 +43,7 @@ const Routes = () => {
 
       <Route exact={true} path='/usuarios' component={User} />
       <Route path='/usuarios/editar/:id' component={UserForm} />
-      <Route path='/usuarios/cadastrar' component={UserForm} />
+      <Route path='/usuarios/cadastrar' component={UserForm} /> */}
 
       {/* <Footer /> */}
     </BrowserRouter>
