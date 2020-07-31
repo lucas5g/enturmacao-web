@@ -1,6 +1,5 @@
 import React, { ChangeEvent, useState, FormEvent } from 'react';
 import api from '../../service/api';
-import FormField from '../../components/FormField';
 
 // import { Container } from './styles';
 interface Login {
@@ -53,23 +52,28 @@ const Login: React.FC = () => {
   return (
     <div className="d-flex justify-content-center align-items-center bg-primary vh-100" >
       <form className="rounded p-5 bg-white w-50" onSubmit={handleSubmit}>
-        <FormField
-          type="email"
-          name='email'
-          label='Email'
-          value={login.email}
-          onChange={handleChangeInput}
-
-        />
-
-        <FormField
-          type="password"
-          name='password'
-          label='Senha'
-          value={login.password}
-          onChange={handleChangeInput}
-
-        />
+        <div className="form-group ">
+          <label className="w-100" >
+            Email
+                        <input
+              name="email"
+              type="email"
+              className="form-control "
+              value={login.email}
+              onChange={handleChangeInput} />
+          </label>
+        </div>
+        <div className="form-group">
+          <label className="w-100" >
+            Senha
+                        <input
+              type="password"
+              className="form-control"
+              name="password"
+              value={login.password}
+              onChange={handleChangeInput} />
+          </label>
+        </div>
 
         <button disabled={button?.status} type="submit" className="btn btn-primary">{button?.value}</button>
       </form>

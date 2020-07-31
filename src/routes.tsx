@@ -32,18 +32,17 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      {/* <Route exact={true} path='/' component={Home} />
+      <Route exact={true} path='/' component={Home} />
       <Route path='/home' component={Home} />
 
-      <Route path='/meucurso' component={MyCourse} />
 
-      <Route exact={true} path='/cursos' component={Course} />
+      {/* <Route exact={true} path='/cursos' component={Course} />
       <Route path='/cursos/editar/:id' component={CourseForm} />
-      <Route path='/cursos/cadastrar' component={CourseForm} />
+      <Route path='/cursos/cadastrar' component={CourseForm} /> */}
 
       <Route exact={true} path='/usuarios' component={User} />
       <Route path='/usuarios/editar/:id' component={UserForm} />
-      <Route path='/usuarios/cadastrar' component={UserForm} /> */}
+      <Route path='/usuarios/cadastrar' component={UserForm} /> 
 
       {/* <Footer /> */}
     </BrowserRouter>
