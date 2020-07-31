@@ -35,10 +35,10 @@ const Login: React.FC = () => {
       const { data } = await api.post('/login', login)
       console.log(data)
 
-      // localStorage.setItem('logged', JSON.stringify(data.user))
-      // localStorage.setItem('token', data.token)
+      localStorage.setItem('logged', JSON.stringify(data.user))
+      localStorage.setItem('token', data.access_token)
 
-      // window.location.reload()
+      window.location.reload()
       /** */
     } catch (e) {
       window.alert('Senha ou Usuário - Inválidos')

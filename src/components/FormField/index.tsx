@@ -1,12 +1,11 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 
 // import { Container } from './styles';
 interface Props{
   type: string,
   label: string,
   name: string,
-  value: string,
-  // onChange: (event: ChangeEvent<HTMLInputElement>) => void,
+  value?: string,
   onChange: (e: any) => void;
 
 }

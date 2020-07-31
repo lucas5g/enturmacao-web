@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState  } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
     const [pathname, setPathname] = useState('/')
+
+    
 
     const handleClick = () => {
         setPathname(window.location.pathname)
@@ -25,10 +27,10 @@ const Navbar = () => {
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className={`nav-item ${pathname === '/cursos' && 'active'}`}>
-                        <Link className="nav-link" to="cursos">Cursos</Link>
+                        <Link className="nav-link" to="/cursos">Cursos</Link>
                     </li>
                     <li className={`nav-item ${pathname === '/usuarios' && 'active'}`}  >
-                        <Link className="nav-link" to="usuarios">Usuários</Link>
+                        <Link className="nav-link" to="/usuarios">Usuários</Link>
                     </li>
 
                 </ul>
